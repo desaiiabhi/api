@@ -1,8 +1,8 @@
-var user = require('../model/catmodel');
+var cat = require('../model/catmodel');
 
 exports.cat_insert = async (req,res) => {
     try {
-        var data = await user.create(req.body);
+        var data = await cat.create(req.body);
 
         res.status(200).json({
             status:"insert succesful"
@@ -17,7 +17,7 @@ exports.cat_insert = async (req,res) => {
 exports.cat_show = async (req,res) => {
 
     try {
-        var data = await user.find();
+        var data = await cat.find();
 
         res.status(200).json({
             status:"category show succesful",
@@ -35,7 +35,7 @@ exports.cat_update = async (req,res) => {
     try {
         var id = req.query.id;
 
-        await user.findByIdAndUpdate(id,req.body)
+        await cat.findByIdAndUpdate(id,req.body)
 
         res.status(200).json({
             status:"category update succesful"
@@ -52,7 +52,7 @@ exports.cat_delete = async (req,res) => {
     try {
         var id = req.query.id;
 
-      await user.findByIdAndDelete(id);
+      await cat.findByIdAndDelete(id);
 
         res.status(200).json({
             status:"category delete succesful"
