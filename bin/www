@@ -9,7 +9,7 @@ var debug = require('debug')('cat-and-pro:server');
 var http = require('http');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/cat_pd')
+mongoose.connect('mongodb+srv://abhi20:abhi2004@cluster0.f3igmgl.mongodb.net/cat_pd')
   .then(() => console.log('Connected!'));
 /**
  * Get port from environment and store in Express.
