@@ -1,5 +1,5 @@
 var express = require('express');
-const{pd_insert,pd_show,pd_update,pd_delete,pd_id_search,pd_nm_search,pd_limit_skip,pd_category,category} = require('../controller/pdcontroller');
+const{pd_insert,pd_show,pd_update,pd_delete,pd_id_search,pd_nm_search,pd_limit_skip,pd_category,category} = require('../controller/productcontroller');
 var router = express.Router();
 
 router.post('/pinsert',pd_insert);

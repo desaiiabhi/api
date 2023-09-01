@@ -1,4 +1,4 @@
-var user = require('../model/pdmodel');
+var user = require('../model/productmodel');
 
 exports.pd_insert = async (req,res) => {
     try {
@@ -163,7 +163,7 @@ exports.category = async (req,res) => {
 
     try {
 
-        var data = await user.find(req.body.category);
+        var data = await user.find().select("category");
       
         res.status(200).json({
             status:"category all succesful",

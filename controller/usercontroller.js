@@ -62,13 +62,12 @@ exports.search_user = async (req,res) => { // get == http://localhost:3000/users
 }
 
 exports.filter_user = async (req,res) => {
-    var key = req.query.key;
-    var value = req.query.value;
+    var key = req.query;
 
-    var data = await user.find({filed:key,$and,value:value});
+    var data = await user.find(key);
 
     res.status(200).json({
-        status:"single search name succesfull",
+        status:"single filtername succesfull",
         data
     })
 }

@@ -1,5 +1,5 @@
 var cart=require('../model/cartmodel');
-var product=require('../model/pdmodel');
+var product=require('../model/productmodel');
 
 exports.cart_add = async (req,res) => {     //get method -> api==http://localhost:3000/cart/cart_add/ <-id apvi
     try {
